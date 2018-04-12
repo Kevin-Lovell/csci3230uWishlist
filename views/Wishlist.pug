@@ -1,0 +1,26 @@
+extends Navbar
+block content
+  h1(class="col-md-offset-1")= '-'
+  h1(class="col-md-offset-1")= message
+  div(style ="height:500px;overflow:auto;")
+    table(class="table")
+      tr
+        th Title
+        th Genre
+        th Price
+        th Rating
+        th Action
+      each usersGames in games
+        tr
+          td= usersGames.gameTitle
+          td= usersGames.genre
+          td= usersGames.price
+          td= usersGames.rating
+          td
+            form(action='/deleteGame', method='post', class='form-inline')
+              div(class='form-group')
+                input(type='hidden', name='gameTitle', value = usersGames.gameTitle, class='form-control')
+                input(type='hidden', name='genre', value = usersGames.genre, class='form-control')
+                input(type='hidden', name='price', value = usersGames.price, class='form-control')
+                input(type='hidden', name='rating', value = usersGames.rating, class='form-control')
+                button(type='submit', class='btn btn-primary') Remove from Wishlist

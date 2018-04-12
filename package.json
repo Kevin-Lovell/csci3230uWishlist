@@ -1,0 +1,18 @@
+{
+  "name": "FinalProject",
+  "version": "1.0.0",
+  "description": "A program that searches games",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kevin Lovell",
+  "license": "0BSD",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "express-session": "^1.15.6",
+    "pug": "^2.0.0-beta3",
+    "uuid": "^3.2.1"
+  }
+}

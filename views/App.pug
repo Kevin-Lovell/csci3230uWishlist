@@ -1,0 +1,47 @@
+extends Navbar
+block content
+  h1(class="col-md-offset-1")= '-'
+  h1(class="col-md-offset-1")= message
+  div(style ="height:500px;overflow:auto;")
+    table(class="table")
+      tr
+        th Title
+        th Genre
+        th Price
+        th Rating
+        th Action
+      each gamesList in games
+        tr
+          td= gamesList.gameTitle
+          td= gamesList.genre
+          td= gamesList.price
+          td= gamesList.rating
+          td
+            form(action='/addGame', method='post', class='form-inline')
+              div(class='form-group')
+                input(type='hidden', name='gameTitle', value = gamesList.gameTitle, class='form-control')
+                input(type='hidden', name='genre', value = gamesList.genre, class='form-control')
+                input(type='hidden', name='price', value = gamesList.price, class='form-control')
+                input(type='hidden', name='rating', value = gamesList.rating, class='form-control')
+                button(type='submit', class='btn btn-primary') Add to Wishlist
+  h2= 'Filter Games by Genre'
+  form(action='/filterGames', method='post', class='form-inline')
+    div(class='col-md-1 form-group')
+      input(type='hidden', name='genre', value = 'all', class='form-control')
+      button(type='submit', class='btn btn-primary') All
+  form(action='/filterGames', method='post', class='form-inline')
+    div(class='col-md-1 form-group')
+      input(type='hidden', name='genre', value = 'adventure', class='form-control')
+      button(type='submit', class='btn btn-primary') Adventure
+  form(action='/filterGames', method='post', class='form-inline')
+    div(class='col-md-1 form-group')
+      input(type='hidden', name='genre', value = 'horror', class='form-control')
+      button(type='submit', class='btn btn-primary') Horror
+  form(action='/filterGames', method='post', class='form-inline')
+    div(class='col-md-1 form-group')
+      input(type='hidden', name='genre', value = 'fighting', class='form-control')
+      button(type='submit', class='btn btn-primary') Fighting
+  form(action='/filterGames', method='post', class='form-inline')
+    div(class='col-md-1 form-group')
+      input(type='hidden', name='genre', value = 'shooter', class='form-control')
+      button(type='submit', class='btn btn-primary') Shooter

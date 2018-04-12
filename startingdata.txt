@@ -1,0 +1,25 @@
+db.gamesList.insertMany([{gameTitle: 'Call of Duty: WWII', genre: 'shooter', price: 79.99, rating: 8}, 
+		     {gameTitle: 'Horizon Zero Dawn', genre: 'adventure', price: 49.99, rating: 9},
+                     {gameTitle: 'Injustice 2', genre: 'fighting', price: 49.99, rating: 9}]);
+
+db.gamesList.insertOne({gameTitle: 'Prey', genre: 'shooter', price: 49.99, rating: 7});
+
+
+db.gamesList.insertOne({gameTitle: 'Destiny 2', genre: 'shooter', price: 49.99, rating: 7});
+
+db.gamesList.insertOne({gameTitle: 'Resident Evil 7', genre: 'horror', price: 69.99, rating: 8});
+
+db.gamesList.insertMany([{gameTitle: 'Prey', genre: 'shooter', price: 49.99, rating: 7}, 
+		     {gameTitle: 'For Honor', genre: 'fighting', price: 39.99, rating: 7}, 
+		     {gameTitle: 'Life is Strange: Before the Storm', genre: 'adventure', price: 19.99, rating: 8}, 
+		     {gameTitle: 'Marvel vs. Capcom Infinite', genre: 'fighting', price: 39.99, rating: 8}, 
+		     {gameTitle: 'PUBG', genre: 'shooter', price: 39.99, rating: 8}, 
+		     {gameTitle: 'The Legend of Zelda', genre: 'adventure', price: 79.99, rating: 9}, 
+		     {gameTitle: 'Friday the 13th: The Game', genre: 'horror', price: 29.99, rating: 7}, 
+		     {gameTitle: 'Nidhogg 2', genre: 'fighting', price: 19.99, rating: 7}, 
+		     {gameTitle: 'Wolfenstein II', genre: 'shooter', price: 49.99, rating: 9}, 
+		     {gameTitle: 'Assassins Creed: Origins', genre: 'adventure', price: 69.99, rating: 8}, 
+		     {gameTitle: 'Outlast 2', genre: 'horror', price: 29.99, rating: 8},
+		     {gameTitle: 'Arms', genre: 'fighting', price: 49.99, rating: 7},
+		     {gameTitle: 'Gravity Rush 2', genre: 'adventure', price: 49.99, rating: 8},
+		     {gameTitle: 'The Evil Within 2', genre: 'horror', price: 49.99, rating: 9}]);
